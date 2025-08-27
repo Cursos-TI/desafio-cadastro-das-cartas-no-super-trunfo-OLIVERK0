@@ -4,9 +4,123 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+
 
 int main() {
+
+//variaveis carta1
+
+     char estado1;
+     char codigo1[4] = "A01";
+     char nome_cidade1[51] = "São Paulo";
+     int populacao1;
+     float area1;
+     float pib1 , super_poder_1;
+     int pontos_turisticos1;
+     float densidade1, pib_per_capita1;
+
+     //variaveis carta2
+
+     char estado2;
+     char codigo2[4];
+     char nome_cidade2[51];
+     int populacao2;
+     float area2;
+     float pib2, super_poder_2;
+     int pontos_turisticos2;
+     float densidade2, pib_per_capita2;
+
+     //entrada de dados da carta 1
+     printf("Cadastro da carta 1:\n");
+     printf("Informe o Estado [A-H]:");
+     scanf(" %s", &estado1);
+     printf("Informe o código da Carta (ex:A01):");
+     scanf(" %s", &codigo1);
+     printf("Informe o nome da cidade:");
+     scanf(" %s", &nome_cidade1);
+     printf("Informe a População:");
+     scanf("%i", &populacao1);
+     printf("Informe a Área em KM²:");
+     scanf("%f", &area1);
+     printf("Informe o PIB em Bilhões de Reais:");
+     scanf("%f", &pib1);
+     printf("Número de Ponto Turístico:");
+     scanf("%d", &pontos_turisticos1);
+
+     printf("\n");
+
+     //Entrada de dados da Carta 2
+
+     printf("Cadastro da carta 2:\n");
+     printf("Informe o Estado [A-H]:");
+     scanf(" %s", &estado2);
+     printf("Informe o código da Carta (ex:A02):");
+     scanf(" %s", &codigo2);
+     printf("Informe o nome da cidade:");
+     scanf(" %s", &nome_cidade2);
+     printf("Informe a População:");
+     scanf("%i", &populacao2);
+     printf("Informe a Área em KM²:");
+     scanf("%f", &area2);
+     printf("Informe o PIB em Bilhões de Reais:");
+     scanf("%f", &pib2);
+     printf("Número de Ponto Turístico:");
+     scanf("%d", &pontos_turisticos2);
+
+     printf("\n");
+
+     //calcular a Densidade Populacional e o pib per capita
+      
+    densidade1 = populacao1 / area1;
+    pib_per_capita1 = pib1 / populacao1;
+    super_poder_1 = (float)populacao1 + area1 + pib1 + pontos_turisticos1 + pib_per_capita1 + (1.0/densidade1);
+    
+    densidade2 = populacao2 / area2;
+    pib_per_capita2 = pib2 / populacao2;
+    super_poder_2 = (float)populacao2 + area2 + pib2 + pontos_turisticos2 + pib_per_capita2 + (1.0/densidade2);
+
+     //Exibição dos dados da carta 1
+
+     printf("Carta 1:\n");
+     printf("Estado: %c\n", estado1);
+     printf("Código da Carta: %s\n", codigo1);
+     printf("Nome da Cidade: %s\n", nome_cidade1);
+     printf("População: %i\n", populacao1);
+     printf("Área: %.2f KM²\n", area1);
+     printf("PIB: %.2f Bilhões\n", pib1);
+     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1);
+     printf("Densidade Populacional: %f Hab/Km²\n", densidade1);
+     printf("PIB per Capita: %f Reais\n", pib_per_capita1);
+
+     printf("\n;");
+
+     //Exibição de dados da Carta 2
+
+     printf("Carta 2: \n");
+     printf("Estado: %c\n", estado2);
+     printf("Código da Carta: %s\n", codigo2);
+     printf("Nome da Cidade: %s\n", nome_cidade2);
+     printf("População: %i\n", populacao2);
+     printf("Área: %.2f KM²\n", area2);
+     printf("PIB: %.2f Bilhões\n", pib2);
+     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2);
+     printf("Densidade Populacional: %f hab/Km²\n", densidade2);
+     printf("PIB per capita:%f Reais\n", pib_per_capita2);
+
+     //comparações
+     printf("comparação das cartas:\n");
+     
+     printf("População: Carta 1 venceu(%d)\n", populacao1 > populacao2);
+     printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
+     printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
+     printf("Pontos Turísticos: Carta 1 venceu(%d)\n", pontos_turisticos1 > pontos_turisticos2);
+     printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade1 < densidade2);
+     printf("PIB per Capita: Carta 1 venceu(%d)\n", pib_per_capita1 > pib_per_capita2);
+     printf("Super Poder: Carta 1 venceu (%d)\n", super_poder_1 < super_poder_2);
+
+
+
+
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
